@@ -8,7 +8,7 @@ import userRouter from './route/userRoute.js'
 import contentRouter from './route/contentRoute.js'
 
 dotenv.config()
-const port = process.env.PORT
+const port = process.env.PORT || 5000
 
 
 const app = express()
@@ -29,7 +29,7 @@ app.get("/" , (req,res)=>{
     res.send("Hello from Server")
 })
 
-const port = process.env.PORT || 5000
+
 
 if (process.env.NODE_ENV !== "production") {
   app.listen(port, () => {
