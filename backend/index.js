@@ -29,7 +29,14 @@ app.get("/" , (req,res)=>{
     res.send("Hello from Server")
 })
 
-app.listen(port , ()=>{
-    console.log("Server Started")
+const port = process.env.PORT || 5000
+
+if (process.env.NODE_ENV !== "production") {
+  app.listen(port, () => {
+    console.log("Server Started on port", port)
     connectDb()
-})
+  })
+} else {
+  connectDb()
+}
+
