@@ -31,12 +31,8 @@ app.get("/" , (req,res)=>{
 
 
 
-if (process.env.NODE_ENV !== "production") {
-  app.listen(port, () => {
-    console.log("Server Started on port", port)
-    connectDb()
-  })
-} else {
+app.listen(port, () => {
+  console.log("Server Started on port", port)
   connectDb()
-}
+})
 
