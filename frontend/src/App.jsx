@@ -41,7 +41,7 @@ import ManagePlaylist from './pages/ManagePlaylist'
 import UseGetRecommendation from './customHooks/UseGetRecommendation'
 import RevenuePage from './component/RevenuePage'
 
-export const serverUrl = "https://youtube-clone-12z9.vercel.app"
+export const serverUrl = "https://youtube-clone-1-do70.onrender.com"
 
 const ProtectedRoute = ({ userData, children }) => {
   if (!userData) {
