@@ -35,7 +35,7 @@ export const signUp = async (req,res) => {
         
         res.cookie("token",token , {
             httpOnly:true,
-            secure:false,
+            secure:true,
             sameSite: "None",
             maxAge: 7 * 24 * 60 * 60 * 1000
         })
@@ -60,7 +60,7 @@ export const signin = async (req,res) => {
         let token = await genToken(user._id)
         res.cookie("token",token , {
             httpOnly:true,
-            secure:false,
+            secure:true,
             sameSite: "None",
             maxAge: 7 * 24 * 60 * 60 * 1000
         })
@@ -118,7 +118,7 @@ export const googleAuth = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false,
+      secure: true,
       sameSite: "None",
       maxAge: 7 * 24 * 60 * 60 * 1000
     });
